@@ -97,7 +97,9 @@ public class cinema {
         for (int i=0;i<movies.size();i++){
             halfname=movies.get(i).getName().substring(0 , x);
             if (halfname.equals(subname)){
+                busyRooms[roomOfMovie(movies.get(i).getName() ,movies.get(i).getAno() ,movies.get(i).getDuracion() )]=null;
                 movies.remove(i);
+
             }
         }
     }
@@ -115,15 +117,15 @@ public class cinema {
         int room=-1;
         if(searchmovie(film)){
             for (int i=0 ; i<busyRooms.length ; i++){
-                if (busyRooms[i].isEqual(film)){
-                        System.out.println(i);
+                if (busyRooms[i]!=null && busyRooms[i].isEqual(film)){
+
                         room=i;
                         break;
                 }
             }
             Scanner sc=new Scanner(System.in);
             if (room!=-1){
-                System.out.print("escribe el numero de otra habitación desea cambiarla : ");
+                System.out.print(" esta pelicula esta el la habitacion "+  room+ " escribe el numero de otra habitación desea cambiarla : ");
                 respuesta=sc.nextInt();
                 while (!isfree(respuesta)){
                     System.out.print("este room esta ocupada , escribe otra : ");

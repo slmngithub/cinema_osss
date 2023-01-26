@@ -29,8 +29,22 @@ public class test {
         System.out.println("----------[[[ LAS PELICULAS QUE TENEMOS]]]----------");
         cine.visualizacion();
         System.out.println("----------[[[ END ]]]----------");
-        System.out.println(cine.roomOfMovie("avatar" , 2014 , 120));
-        System.out.println(cine.roomOfMovie("the mask" , 1995 , 130));
+        /*System.out.println(cine.roomOfMovie("avatar" , 2014 , 120));
+        System.out.println(cine.roomOfMovie("the mask" , 1995 , 130));*/
+        /*cine.removeMovie("iro");
+        System.out.println("----------[[[ LAS PELICULAS QUE TENEMOS]]]----------");
+        cine.visualizacion();
+        System.out.println("----------[[[ END ]]]----------");
+        System.out.println(cine.freeRooms());
+        System.out.println(cine.roomOfMovie("catsh if you can" , 2018 , 100));
+        System.out.println(cine.freeRooms());
+        cine.changeRoom(m4);
+        System.out.println(cine.roomOfMovie("catsh if you can" , 2018 , 100));
+        System.out.println(cine.freeRooms());*/
+        System.out.println(cine.moviesShorterThanMIN(105));
+        System.out.println(cine.moviesShorterThanHORAS(1,59));
+
+
 
 
 
