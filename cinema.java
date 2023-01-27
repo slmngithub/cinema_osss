@@ -49,7 +49,10 @@ public class cinema {
 
             }
         }
-        else System.out.println("esta pelicula no existe en el cine");
+        else {
+            movies.add(film);
+            addMovie(film);
+        }
 
     }
     public void addMovie(movie film , int numsala){
@@ -60,7 +63,10 @@ public class cinema {
             }
             else System.out.println("la sala esta ocupada");
         }
-        else System.out.println("esta pelicula no existe en el cine");
+        else {
+            movies.add(film);
+            addMovie(film,numsala);
+        }
 
     }
     public void visualizacion(){
